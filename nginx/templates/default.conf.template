@@ -1,0 +1,14 @@
+upstream backend {
+    server app-v1:8000 ${V1_PARAMS};
+    server app-v2:8000 ${V2_PARAMS};
+}
+
+server {
+    listen 80;
+
+    location / {
+        proxy_pass         http://backend;
+        proxy_set_header   Host $host;
+        proxy_set_header   X-Real-IP $remote_addr;
+    }
+}
