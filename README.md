@@ -10,18 +10,4 @@
   pip install -r requirements.txt
   ```
 
-2. Запустите пайплайн:
-
-  ```sh
-  python ml_pipeline.py
-  ```
-
-## Структура
-
-```sh
-.
-├── ml_pipeline.py - ML пайплайн.
-├── .gitlab-ci.yml - конфигурация CI/CD конвейера.
-├── README.md
-└── requirements.txt
-```
+2. Решение содержится в [notebook.ipynb](notebook.ipynb).
