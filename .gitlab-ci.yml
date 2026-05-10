@@ -1,13 +1,8 @@
 stages:
-  - explore
+  - run
 
-Explore-Gitea-Actions:
-  stage: explore
+run-ml-pipeline:
+  stage: run
   script:
-    - echo "The job was automatically triggered by a $CI_PIPELINE_SOURCE event."
-    - echo "This job is now running on a $CI_RUNNER_OS server hosted by GitLab!"
-    - echo "The name of your branch is $CI_COMMIT_REF_NAME and your repository is $CI_PROJECT_PATH."
-    - echo "The $CI_PROJECT_PATH repository has been cloned to the runner."
-    - echo "The workflow is now ready to test your code on the runner."
-    - ls $CI_PROJECT_DIR
-    - echo "This job's status is $CI_JOB_STATUS."
+    - pip install -r requirements.txt
+    - python ml_pipeline.py
