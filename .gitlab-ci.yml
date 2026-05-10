@@ -3,6 +3,7 @@ stages:
 
 run-ml-pipeline:
   stage: run
+  image: python:3.12-slim
   script:
     - pip install -r requirements.txt
     - python ml_pipeline.py
