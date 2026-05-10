@@ -4,12 +4,14 @@ services:
       context: .
     environment:
       - SERVICE_VERSION=0.1.0
+      - PORT=8000
 
   app-v2:
     build:
       context: .
     environment:
       - SERVICE_VERSION=0.2.0
+      - PORT=8000
 
   nginx:
     image: nginx:alpine
